@@ -27,8 +27,7 @@ class MoviesController < ApplicationController
     def destroy
         @movie=Movie.find(params[:id])
         @movie.destroy
-        @event=Event.find(params[:id])
-        @event.destroy
+
         redirect_to movies_path
     end
     private

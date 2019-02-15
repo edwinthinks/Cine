@@ -18,8 +18,6 @@ class EventsController < ApplicationController
         @event = @movie.events.create(events_params)
         @event.update(time_end: @event.time_start + @movie.duration.minutes)
         @event.update(movie_id: @movie.id)          
-        
-
         @event.update_seats               
         redirect_to movie_events_path
     end
@@ -34,7 +32,6 @@ class EventsController < ApplicationController
         @event.update(time_end: @event.time_start + @event.movie.duration.minutes)
         @event.update(movie_id: params[:movie_id])
         
-
         @event.update_seats
         redirect_to movie_events_path
     end
