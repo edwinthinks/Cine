@@ -33,7 +33,9 @@
     <div class="menu">
       <%= link_to('Home', "/",class:'menubot')%>
       <%= link_to('Peliculas', "/movies",class:'menubot')%>
+      <% if user_signed_in? %>
       <%= link_to('Mis reservaciones', user_reservations_path(current_user),class:'menubot')%>
+      <%end%>
     </div>
 
     
