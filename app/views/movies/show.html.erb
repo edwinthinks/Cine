@@ -30,11 +30,12 @@
 
 <br>
 <br>
-<%if @user_rol=="admin"%>
+
     <%= link_to('Modificar', "/movies/#{@movie.id}/edit",class:'boton')%>
     <%= link_to('Eliminar', "/movies/#{@movie.id}",method: :delete, class:'boton')%>
     <%= link_to('Ver funciones', "/movies/#{@movie.id}/events",class:'boton')%>
-
+    
+<%if @user_rol=="admin"%>
 <%end%>
 
 </center>

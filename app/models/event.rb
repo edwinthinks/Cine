@@ -11,6 +11,7 @@ class Event < ApplicationRecord
 
     def add_seat
         seats.create(name: next_seat_name, price: 12000, status: "disponible")
+        
     end
 
     def update_seats

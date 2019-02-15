@@ -17,7 +17,9 @@ class EventsController < ApplicationController
         @movie=Movie.find(params[:movie_id])
         @event = @movie.events.create(events_params)
         @event.update(time_end: @event.time_start + @movie.duration.minutes)
-        @event.update(movie_id: @movie.id)          
+        @event.update(movie_id: @movie.id)    
+        
+        
         @event.update_seats               
         redirect_to movie_events_path
     end
