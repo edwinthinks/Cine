@@ -1,0 +1,20 @@
+
+<% @movie.each_with_index do |a,i| %>
+    <%if i%4 ==0 %>   
+    <br>   
+    <div class="caratula">
+    <%end%>
+    <div class="moviename">
+    <%= link_to("#{a.name}", "/movies/#{a.id}", class: "nombre")%><br>
+    </div>
+    
+    <img src='<%= a.image%>'>
+    <%if i%4 ==3 %>      
+    </div>
+    <%end%>        
+    
+<%end%>
+
+<br>
+<br>
+<%= link_to('Añadir una pelicula a la cartelera', "/movies/new",class:'boton')%>

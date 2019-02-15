@@ -1,0 +1,24 @@
+<div class="formulario">
+    <%= form_for [@movie, @event] do |f| %>
+        <br>
+
+        <p3>date:<p3>
+        <%= f.date_field :date %><br>
+
+        <p3>Hora de la función:<p3>
+        
+        <%= f.time_field :time_start %><br>
+
+        <p3>Número de la sala:<p3>
+        <%= f.text_field :hall %><br>
+
+        <p3>Capacidad de la sala:<p3>
+        <%= f.text_field :capacity %><br>
+
+        
+        <%= f.submit 'Modificar una función'%>
+        
+    <%end%>
+</div>
+
+<%= link_to('Volver', "/movies/#{@movie.id}/events",class:'boton')%>

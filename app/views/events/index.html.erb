@@ -1,0 +1,15 @@
+
+<% @event.each do |event| %> 
+    <div class="funcion">   
+    Dia:
+    <%= event.date%><br>
+    Hora:
+    <%= event.time_start.strftime("%l:%M %p")%><br><br>  
+    <%= link_to('Seleccionar', "/movies/#{event.movie_id}/events/#{event.id}",class:'boton')%>
+    <%= link_to('Edit', "/movies/#{event.movie_id}/events/#{event.id}/edit",class:'boton')%>
+    <%= link_to('Eliminar', "/movies/#{@movie.id}/events/#{event.id}",method: :delete, class:'boton')%>
+    </div>
+<%end%>
+<br>
+<%= link_to('Volver', "/movies/#{@movie.id}",class:'boton')%>
+<%= link_to('Añadir una función', "/movies/#{@movie.id}/events/new",class:'boton')%>

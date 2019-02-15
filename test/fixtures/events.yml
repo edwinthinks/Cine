@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_id: 1
+  date: 2019-02-11
+  time_start: 2019-02-11 09:34:28
+  time_end: 2019-02-11 09:34:28
+  capacity: 1
+  hall: 1
+
+two:
+  movie_id: 1
+  date: 2019-02-11
+  time_start: 2019-02-11 09:34:28
+  time_end: 2019-02-11 09:34:28
+  capacity: 1
+  hall: 1
