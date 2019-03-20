@@ -1,4 +1,14 @@
+<div class="slider">
+    <ul>
+        <li><img src="https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/7632/177632-h" alt=""></li>
+        <li><img src="https://elalebrijeudl.files.wordpress.com/2019/01/jefa-por-accidente.jpg" alt=""></li>
+        <li><img src="https://i.ytimg.com/vi/3l56GMvGGn4/maxresdefault.jpg" alt=""></li>
+        <li><img src="http://static.sportpaleisgroep.be/sportpaleis/img/events/1762/76fcfbea0c27fe4770064c2e86df1115d3d73477/billboard.jpg" alt=""></li>
+        
+    </ul>
+</div>
 
+<div id="cartelera">
 <% @movie.each_with_index do |a,i| %>
     <%if i%4 ==0 %>   
     <br>   
@@ -14,7 +24,9 @@
     <%end%>        
     
 <%end%>
+</div>
+<br>
 
-<br>
-<br>
-<%= link_to('Añadir una pelicula a la cartelera', "/movies/new",class:'boton')%>
+<center>
+<%= link_to('Añadir una pelicula', "/movies/new",class:'boton')%>
+</center>
