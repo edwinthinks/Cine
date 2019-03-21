@@ -15,6 +15,7 @@ class MoviesController < ApplicationController
     def create
         Movie.create(movie_params)
         redirect_to movies_path
+        #c
     end
     def edit
         @movie=Movie.find(params[:id])
