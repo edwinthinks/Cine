@@ -1,40 +1,40 @@
 <center>
-    <div class="big_image">
-        <img src='<%= @movie.big_image%>'> 
-    <div>
+  <div class="big_image">
+    <img src='<%= @movie.big_image%>'>
+  <div>
 
 <div class="informacion">
-    <table>
-        <td>
-            <div class=caratula>
-                <img src='<%= @movie.image%>'>
-            <div> 
-        </td>
-        <td>
-            <p3>Titulo:  </p3><%=@movie.name%><br><br>
-            <p3>Duracion:  </p3>
-                <% horas=@movie.duration/60.0%>
-                <% minutos=((horas-horas.to_i)*60).to_i%>
-                <%=horas.to_i%>h:<%=minutos%>min<br><br>
-            <p3>Sinopsis:  </p3><%=@movie.synopsis%><br><br>
-            <p3>Genero:  </p3><%=@movie.genre%><br>
-        </td>
-    <table>
+  <table>
+    <td>
+      <div class=caratula>
+        <img src='<%= @movie.image%>'>
+      <div>
+    </td>
+    <td>
+      <p3>Titulo:  </p3><%=@movie.name%><br><br>
+      <p3>Duracion:  </p3>
+        <% horas=@movie.duration/60.0%>
+        <% minutos=((horas-horas.to_i)*60).to_i%>
+        <%=horas.to_i%>h:<%=minutos%>min<br><br>
+      <p3>Sinopsis:  </p3><%=@movie.synopsis%><br><br>
+      <p3>Genero:  </p3><%=@movie.genre%><br>
+    </td>
+  <table>
 </div>
 
 <div class="trailer">
    <iframe id="video" width="900" height="450"
-       src='<%= @movie.trailer%>'>
+     src='<%= @movie.trailer%>'>
    </iframe>
 </div>
 
 <br>
 <br>
 
-    <%= link_to('Modificar', "/movies/#{@movie.id}/edit",class:'boton')%>
-    <%= link_to('Eliminar', "/movies/#{@movie.id}",method: :delete, class:'boton')%>
-    <%= link_to('Ver funciones', "/movies/#{@movie.id}/events",class:'boton')%>
-    
+  <%= link_to('Modificar', "/movies/#{@movie.id}/edit",class:'boton')%>
+  <%= link_to('Eliminar', "/movies/#{@movie.id}",method: :delete, class:'boton')%>
+  <%= link_to('Ver funciones', "/movies/#{@movie.id}/events",class:'boton')%>
+
 <%if @user_rol=="admin"%>
 <%end%>
 

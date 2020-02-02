@@ -1,31 +1,30 @@
 <div class="formulario">
-    <%= form_for @movie do |f| %>
-        <br>
-        
-        <p3>Titulo de la pelicula:</p3>
-        <%= f.text_field :name %><br><br>
+  <%= form_for @movie do |f| %>
+  <br>
 
-        <p3>Duración:<p3>
-        <%= f.text_field :duration %><br>
+  <p3>Titulo de la pelicula:</p3>
+  <%= f.text_field :name %><br><br>
 
-        <p3>Sinopsis:<p3>
-        <%= f.text_field :synopsis %><br>
+  <p3>Duración:<p3>
+  <%= f.text_field :duration %><br>
 
-        <p3>Genero:<p3>
-        <%= f.text_field :genre %><br>
+  <p3>Sinopsis:<p3>
+  <%= f.text_field :synopsis %><br>
 
-        <p3>Caratula:<p3>
-        <%= f.text_field :image %><br>
+  <p3>Genero:<p3>
+  <%= f.text_field :genre %><br>
 
-        <p3>Imagen de portada:<p3>
-        <%= f.text_field :big_image %><br>
+  <p3>Caratula:<p3>
+  <%= f.text_field :image %><br>
 
-        <p3>Trailer:<p3>
-        <%= f.text_field :trailer %><br>
-        
-        <center>
-        <%= f.submit 'Actualizar', :class => 'boton_submit'%>
-        </center>
-        
-    <%end%>
+  <p3>Imagen de portada:<p3>
+  <%= f.text_field :big_image %><br>
+
+  <p3>Trailer:<p3>
+  <%= f.text_field :trailer %><br>
+
+  <center>
+    <%= f.submit 'Actualizar', :class => 'boton_submit'%>
+  </center>
+  <%end%>
 </div>

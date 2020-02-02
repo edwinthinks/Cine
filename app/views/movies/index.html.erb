@@ -1,28 +1,28 @@
 <div class="slider">
-    <ul>
-        <li><img src="https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/7632/177632-h" alt=""></li>
-        <li><img src="https://elalebrijeudl.files.wordpress.com/2019/01/jefa-por-accidente.jpg" alt=""></li>
-        <li><img src="https://i.ytimg.com/vi/3l56GMvGGn4/maxresdefault.jpg" alt=""></li>
-        <li><img src="http://static.sportpaleisgroep.be/sportpaleis/img/events/1762/76fcfbea0c27fe4770064c2e86df1115d3d73477/billboard.jpg" alt=""></li>
-        
-    </ul>
+  <ul>
+    <li><img src="https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/7632/177632-h" alt=""></li>
+    <li><img src="https://elalebrijeudl.files.wordpress.com/2019/01/jefa-por-accidente.jpg" alt=""></li>
+    <li><img src="https://i.ytimg.com/vi/3l56GMvGGn4/maxresdefault.jpg" alt=""></li>
+    <li><img src="http://static.sportpaleisgroep.be/sportpaleis/img/events/1762/76fcfbea0c27fe4770064c2e86df1115d3d73477/billboard.jpg" alt=""></li>
+
+  </ul>
 </div>
 
 <div id="cartelera">
 <% @movie.each_with_index do |a,i| %>
-    <%if i%4 ==0 %>   
-    <br>   
-    <div class="caratula">
-    <%end%>
-    <div class="moviename">
-    <%= link_to("#{a.name}", "/movies/#{a.id}", class: "nombre")%><br>
-    </div>
-    
-    <img src='<%= a.image%>'>
-    <%if i%4 ==3 %>      
-    </div>
-    <%end%>        
-    
+  <%if i%4 ==0 %>
+  <br>
+  <div class="caratula">
+  <%end%>
+  <div class="moviename">
+  <%= link_to("#{a.name}", "/movies/#{a.id}", class: "nombre")%><br>
+  </div>
+
+  <img src='<%= a.image%>'>
+  <%if i%4 ==3 %>
+  </div>
+  <%end%>
+
 <%end%>
 </div>
 <br>

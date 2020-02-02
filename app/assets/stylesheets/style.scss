@@ -21,7 +21,7 @@
     text-align: center;
     background: linear-gradient(to right, rgba(31,12,31,1) 0%, rgba(19,9,41,0.62) 100%);
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -36,9 +36,9 @@ body{
     margin: 0;
     padding: 0;
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
     color:white;
-    font-family: 'Noto Sans', sans-serif;    
+    font-family: 'Noto Sans', sans-serif;
 }
 .formulario{
     background: linear-gradient(to right, rgba(133,255,247,1) 0%, rgba(0,92,250,1) 100%);
@@ -50,34 +50,34 @@ body{
     border-radius: 20px;
 }
 
-.big_image img{       
-    border-top: 5px; 
+.big_image img{
+    border-top: 5px;
     border-bottom: 5px;
-    color:black; 
+    color:black;
     border-color: black;
     width: 100%;
-    height: 400px;   
+    height: 400px;
 }
 .caratula img{
     width: 200px;
-    height: 250px; 
-    margin: 10px; 
-    float: left;    
+    height: 250px;
+    margin: 10px;
+    float: left;
 }
 .caratula{
     width:100%;
     display: flex;
     .nombre{
         color: white;
-        text-decoration: none;    
+        text-decoration: none;
         padding: 4px;
-        background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,0.17) 100%); 
+        background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,0.17) 100%);
         float:left;
-        position:absolute;    
+        position:absolute;
     }
 }
 
-.moviename{    
+.moviename{
     padding-left: 2.5cm;
 }
 .trailer{
@@ -100,7 +100,7 @@ input{
     border-radius: 4px;
     padding-left: 15px;
     font-size: 18px;
-    font-family: 'Noto Sans', sans-serif; 
+    font-family: 'Noto Sans', sans-serif;
     margin:2px;
 
 }
@@ -113,7 +113,7 @@ input{
     margin:25px;
     border-radius: 10px;
     text-decoration: none;
-    
+
 }
 
 .boton_submit{
@@ -124,7 +124,7 @@ input{
     padding-right: 25px;
     margin:25px;
     border-radius: 10px;
-    text-decoration: none;  
+    text-decoration: none;
 
 }
 
@@ -152,16 +152,16 @@ input{
     -moz-box-shadow: 0px 0px 51px 23px rgba(156,148,156,1);
     box-shadow: 0px 0px 51px 23px rgba(156,148,156,1);
 }
-.sillas {    
+.sillas {
     width:10cm;
     padding:5px;
     display: block;
     background: linear-gradient(135deg, rgba(168,252,255,1) 0%, rgba(0,84,173,1) 100%);
-    
+
     img{
         padding: 5px;
         width: 25px;
-        height: 25px;        
+        height: 25px;
         }
 }
 
@@ -189,7 +189,7 @@ input{
     margin: 0;
     padding: 8cm;
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
     font-family: 'Shadows Into Light', cursive;
     font-size:60px;
 }
@@ -213,17 +213,17 @@ input{
     }
 
     animation: cambio 20s infinite;
-    animation-direction:alternate; 
-       
+    animation-direction:alternate;
+
 }
 
 @keyframes cambio {
     0%{margin-left: 0;}
     20%{margin-left: 0;}
     25%{margin-left: -100%;}
-    45%{margin-left: -100%;}   
+    45%{margin-left: -100%;}
     50%{margin-left: -200%;}
-    70%{margin-left: -200%;}  
+    70%{margin-left: -200%;}
     75%{margin-left: -300%;}
-    100%{margin-left: -300%;} 
+    100%{margin-left: -300%;}
 }

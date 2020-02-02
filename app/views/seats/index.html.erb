@@ -1,33 +1,32 @@
 <%filas=@event.capacity/5%>
 <%alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ".chars%>
 <div class="pantalla">
-    <center>Pantalla</center>
+  <center>Pantalla</center>
 </div>
 
 <center>
 
-    <% @event.seats.each_with_index do |seat, i| %>
-        <% if i % 20 == 0 %>
-            <container class="seats">
-        <% end %>
-            <div class="sillas" id="<%= seat.status == "disponible" ? "disponible" : "no_disponible"%>">    
-            <% if seat.status == "disponible"%>
-            
-            <%= link_to image_tag('https://image.flaticon.com/icons/png/128/1408/1408731.png'),movie_event_seat_reservations_path(@event.movie_id, @event.id, seat.id, seat_id: seat.id), method: :post %><br>  
-            <%else%>
-            <img src='https://image.flaticon.com/icons/png/128/1408/1408731.png'>
-            <%end%>  
-            <%=seat.name%>
-                               
-        </div>
-        <% if i % 20 == 19 || seat == @event.seats.last %>
-            </container>
-        <% end %>        
-    <%end %><br>
+  <% @event.seats.each_with_index do |seat, i| %>
+    <% if i % 20 == 0 %>
+      <container class="seats">
+    <% end %>
+      <div class="sillas" id="<%= seat.status == "disponible" ? "disponible" : "no_disponible"%>">
+      <% if seat.status == "disponible"%>
 
-    </container>
+      <%= link_to image_tag('https://image.flaticon.com/icons/png/128/1408/1408731.png'),movie_event_seat_reservations_path(@event.movie_id, @event.id, seat.id, seat_id: seat.id), method: :post %><br>
+      <%else%>
+      <img src='https://image.flaticon.com/icons/png/128/1408/1408731.png'>
+      <%end%>
+      <%=seat.name%>
+
+    </div>
+    <% if i % 20 == 19 || seat == @event.seats.last %>
+      </container>
+    <% end %>
+  <%end %><br>
+
+  </container>
 
 <center>
 
 <%= link_to('Volver', movie_event_path(@event.movie_id, @event.id),class:'boton')%>
-
