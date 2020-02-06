@@ -2,6 +2,8 @@ class Event < ApplicationRecord
     belongs_to :movie
     has_many :seats, dependent: :destroy
 
+    validates_presence_of :movie_id, :date, :time_start, :time_end, :capacity, :hall
+
     def next_seat_name
         alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         letra = alpha[seats.length / 20]
@@ -11,7 +13,7 @@ class Event < ApplicationRecord
 
     def add_seat
         seats.create(name: next_seat_name, price: 12000, status: "disponible")
-        
+
     end
 
     def update_seats

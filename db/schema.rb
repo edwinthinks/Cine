@@ -10,29 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190214143359) do
+ActiveRecord::Schema.define(version: 20200205205821) do
 
   create_table "events", force: :cascade do |t|
-    t.integer "movie_id"
-    t.date "date"
-    t.time "time_start"
-    t.time "time_end"
-    t.integer "capacity"
-    t.integer "hall"
+    t.integer "movie_id", null: false
+    t.date "date", null: false
+    t.time "time_start", null: false
+    t.time "time_end", null: false
+    t.integer "capacity", null: false
+    t.integer "hall", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "name"
-    t.integer "duration"
-    t.string "synopsis"
-    t.string "genre"
-    t.string "trailer"
-    t.string "image"
+    t.string "name", null: false
+    t.integer "duration", null: false
+    t.string "synopsis", null: false
+    t.string "genre", null: false
+    t.string "trailer", null: false
+    t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "big_image"
+    t.string "big_image", null: false
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -43,13 +43,13 @@ ActiveRecord::Schema.define(version: 20190214143359) do
   end
 
   create_table "seats", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "event_id"
-    t.integer "price"
+    t.integer "price", null: false
     t.integer "reservation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status"
+    t.string "status", null: false
   end
 
   create_table "users", force: :cascade do |t|
