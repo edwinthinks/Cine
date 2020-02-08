@@ -42,6 +42,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 # Use Puma as the app server
+  gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :production do
